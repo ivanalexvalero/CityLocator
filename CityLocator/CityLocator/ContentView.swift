@@ -11,10 +11,11 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
-
+    let cityService = CityService()
     var body: some View {
         NavigationSplitView {
             List {
+                
                 ForEach(items) { item in
                     NavigationLink {
                         Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
@@ -37,6 +38,9 @@ struct ContentView: View {
         } detail: {
             Text("Select an item")
         }
+        .onAppear {
+            testService()
+        }
     }
 
     private func addItem() {
@@ -50,6 +54,20 @@ struct ContentView: View {
         withAnimation {
             for index in offsets {
                 modelContext.delete(items[index])
+            }
+        }
+    }
+    
+    private func testService() {
+        cityService.fetchCities { result in
+            switch result {
+            case .success(let cities):
+                print("Cities fetched successfully:")
+                for city in cities {
+                    print("\(city.name), \(city.country)")
+                }
+            case .failure(let error):
+                print("Error fetching cities: \(error)")
             }
         }
     }

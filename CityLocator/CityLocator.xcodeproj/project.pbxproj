@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4A55A12C59A80A0092B043 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A55A02C59A80A0092B043 /* CityModel.swift */; };
+		CE4A55A42C59A9690092B043 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A55A32C59A9690092B043 /* CityService.swift */; };
+		CE70BA452C5A94610036812D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA442C5A94610036812D /* Constants.swift */; };
+		CE70BA472C5A96C80036812D /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA462C5A96C80036812D /* URLs.swift */; };
 		CEF08A122C5862F1009C057A /* CityLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A112C5862F1009C057A /* CityLocatorApp.swift */; };
 		CEF08A142C5862F1009C057A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A132C5862F1009C057A /* ContentView.swift */; };
 		CEF08A162C5862F1009C057A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A152C5862F1009C057A /* Item.swift */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4A55A02C59A80A0092B043 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		CE4A55A32C59A9690092B043 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		CE70BA442C5A94610036812D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE70BA462C5A96C80036812D /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CEF08A0E2C5862F1009C057A /* CityLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF08A112C5862F1009C057A /* CityLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorApp.swift; sourceTree = "<group>"; };
 		CEF08A132C5862F1009C057A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +42,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4A559F2C59A7730092B043 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE4A55A02C59A80A0092B043 /* CityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE4A55A22C59A9120092B043 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE4A55A32C59A9690092B043 /* CityService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE70BA432C5A93ED0036812D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE70BA442C5A94610036812D /* Constants.swift */,
+				CE70BA462C5A96C80036812D /* URLs.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CEF08A052C5862F1009C057A = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +86,9 @@
 		CEF08A102C5862F1009C057A /* CityLocator */ = {
 			isa = PBXGroup;
 			children = (
+				CE70BA432C5A93ED0036812D /* Utils */,
+				CE4A55A22C59A9120092B043 /* Services */,
+				CE4A559F2C59A7730092B043 /* Model */,
 				CEF08A112C5862F1009C057A /* CityLocatorApp.swift */,
 				CEF08A132C5862F1009C057A /* ContentView.swift */,
 				CEF08A152C5862F1009C057A /* Item.swift */,
@@ -140,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4A55A42C59A9690092B043 /* CityService.swift in Sources */,
+				CE4A55A12C59A80A0092B043 /* CityModel.swift in Sources */,
 				CEF08A142C5862F1009C057A /* ContentView.swift in Sources */,
+				CE70BA472C5A96C80036812D /* URLs.swift in Sources */,
 				CEF08A162C5862F1009C057A /* Item.swift in Sources */,
 				CEF08A122C5862F1009C057A /* CityLocatorApp.swift in Sources */,
+				CE70BA452C5A94610036812D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
