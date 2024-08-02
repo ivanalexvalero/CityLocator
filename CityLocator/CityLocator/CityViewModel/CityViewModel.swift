@@ -21,7 +21,7 @@ class CityViewModel: ObservableObject {
         loadCities()
     }
     
-    private func loadCities() {
+    func loadCities() {
         cityService.fetchCities { result in
             DispatchQueue.main.async {
                 switch result {
@@ -35,7 +35,6 @@ class CityViewModel: ObservableObject {
             }
         }
     }
-    
     
     private func filterCities() {
         if filter.isEmpty {
