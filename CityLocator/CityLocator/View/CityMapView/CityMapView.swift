@@ -23,31 +23,48 @@ struct CityMapView: View {
     }
 
     var body: some View {
-        ZStack {
-            Map(coordinateRegion: $region)
-                .navigationTitle("\(city.name), \(city.country)")
-                .navigationBarTitleDisplayMode(.inline)
-            VStack {
-                Spacer()
-                Button {
-                    showInfoSheet.toggle()
-                } label: {
-                    Text("\(CityMapConstants.moreInfo) \(city.name)")
+        GeometryReader { geometry in
+            ZStack {
+                    Map(coordinateRegion: $region)
+                        .navigationTitle("\(city.name), \(city.country)")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .padding(.top, 25)
+                        .onChange(of: city) { newCity in
+                            updateRegion(for: newCity)
+                        }
+                        .presentationCornerRadius(30.0)
+                VStack {
+                    if geometry.size.width < geometry.size.height {
+                        Capsule()
+                            .frame(width: 60, height: 5)
+                            .foregroundColor(.black.opacity(0.3))
+                            .padding(.top, 8)
+                    }
+                    Spacer()
+                    Button {
+                        showInfoSheet.toggle()
+                    } label: {
+                        Text("\(CityMapConstants.moreInfoAbout) \(city.name)")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
+                    .fullScreenCover(isPresented: $showInfoSheet) {
+                        NavigationView {
+                            CityDetailView(city: city)
+                                .presentationDetents([.fraction(0.5)])
+                        }
+                    }
                 }
-                .buttonStyle(.borderedProminent)
-                .padding()
-                .sheet(isPresented: $showInfoSheet, content: {
-                    CityDetailView(city: city)
-                        .presentationDetents([.fraction(0.5)])
-                })
             }
-            .navigationTitle(CityMapConstants.moreInfo)
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    private func updateRegion(for city: CityModel) {
+        region.center = CLLocationCoordinate2D(latitude: city.coord.lat, longitude: city.coord.lon)
+    }
 }
-
 
 #Preview {
     CityMapView(city: CityModel.cities)
 }
+

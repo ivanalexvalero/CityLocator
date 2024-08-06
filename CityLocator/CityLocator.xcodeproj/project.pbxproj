@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0348292C61A1F6000CF730 /* CityLocatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0348282C61A1F6000CF730 /* CityLocatorView.swift */; };
+		CE2FFCC42C62CC0200F47127 /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FFCC32C62CC0200F47127 /* OrientationManager.swift */; };
 		CE421D1A2C5AEFAD002178C2 /* CityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE421D192C5AEFAD002178C2 /* CityListView.swift */; };
 		CE421D1D2C5AF137002178C2 /* CityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE421D1C2C5AF137002178C2 /* CityDetailView.swift */; };
 		CE421D1F2C5AF3E0002178C2 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE421D1E2C5AF3E0002178C2 /* PreviewData.swift */; };
@@ -17,6 +19,8 @@
 		CE70BA452C5A94610036812D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA442C5A94610036812D /* Constants.swift */; };
 		CE70BA472C5A96C80036812D /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA462C5A96C80036812D /* URLs.swift */; };
 		CE70BA4A2C5AB42E0036812D /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA492C5AB42E0036812D /* CityViewModel.swift */; };
+		CE7AE2912C5D5F4100DBC598 /* citiesDB.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7AE2902C5D5F4100DBC598 /* citiesDB.json */; };
+		CE7AE2932C5D667600DBC598 /* CityServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AE2922C5D667600DBC598 /* CityServiceMock.swift */; };
 		CEF08A122C5862F1009C057A /* CityLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A112C5862F1009C057A /* CityLocatorApp.swift */; };
 		CEF08A142C5862F1009C057A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A132C5862F1009C057A /* ContentView.swift */; };
 		CEF08A162C5862F1009C057A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A152C5862F1009C057A /* Item.swift */; };
@@ -25,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0348282C61A1F6000CF730 /* CityLocatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorView.swift; sourceTree = "<group>"; };
+		CE2FFCC32C62CC0200F47127 /* OrientationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
 		CE421D192C5AEFAD002178C2 /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
 		CE421D1C2C5AF137002178C2 /* CityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailView.swift; sourceTree = "<group>"; };
 		CE421D1E2C5AF3E0002178C2 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
@@ -35,6 +41,8 @@
 		CE70BA442C5A94610036812D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE70BA462C5A96C80036812D /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CE70BA492C5AB42E0036812D /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		CE7AE2902C5D5F4100DBC598 /* citiesDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = citiesDB.json; sourceTree = "<group>"; };
+		CE7AE2922C5D667600DBC598 /* CityServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceMock.swift; sourceTree = "<group>"; };
 		CEF08A0E2C5862F1009C057A /* CityLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF08A112C5862F1009C057A /* CityLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorApp.swift; sourceTree = "<group>"; };
 		CEF08A132C5862F1009C057A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,9 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0348272C61A002000CF730 /* CityLocatorView */ = {
+			isa = PBXGroup;
+			children = (
+				CE0348282C61A1F6000CF730 /* CityLocatorView.swift */,
+			);
+			path = CityLocatorView;
+			sourceTree = "<group>";
+		};
 		CE421D152C5AEF5A002178C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE0348272C61A002000CF730 /* CityLocatorView */,
 				CE421D202C5AF949002178C2 /* CityMapView */,
 				CE421D172C5AEF7B002178C2 /* CityDetailView */,
 				CE421D162C5AEF6D002178C2 /* CityListView */,
@@ -100,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4A55A32C59A9690092B043 /* CityService.swift */,
+				CE7AE2922C5D667600DBC598 /* CityServiceMock.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -111,6 +129,8 @@
 				CE70BA462C5A96C80036812D /* URLs.swift */,
 				CE421D1E2C5AF3E0002178C2 /* PreviewData.swift */,
 				CE421D242C5C3A87002178C2 /* CityViewConstants.swift */,
+				CE7AE2902C5D5F4100DBC598 /* citiesDB.json */,
+				CE2FFCC32C62CC0200F47127 /* OrientationManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7AE2912C5D5F4100DBC598 /* citiesDB.json in Resources */,
 				CEF08A1B2C5862F3009C057A /* Preview Assets.xcassets in Resources */,
 				CEF08A182C5862F3009C057A /* Assets.xcassets in Resources */,
 			);
@@ -238,10 +259,13 @@
 				CE4A55A12C59A80A0092B043 /* CityModel.swift in Sources */,
 				CE421D222C5AF95C002178C2 /* CityMapView.swift in Sources */,
 				CEF08A142C5862F1009C057A /* ContentView.swift in Sources */,
+				CE7AE2932C5D667600DBC598 /* CityServiceMock.swift in Sources */,
 				CE421D1F2C5AF3E0002178C2 /* PreviewData.swift in Sources */,
 				CE421D252C5C3A87002178C2 /* CityViewConstants.swift in Sources */,
+				CE0348292C61A1F6000CF730 /* CityLocatorView.swift in Sources */,
 				CE70BA4A2C5AB42E0036812D /* CityViewModel.swift in Sources */,
 				CE421D1D2C5AF137002178C2 /* CityDetailView.swift in Sources */,
+				CE2FFCC42C62CC0200F47127 /* OrientationManager.swift in Sources */,
 				CE70BA472C5A96C80036812D /* URLs.swift in Sources */,
 				CEF08A162C5862F1009C057A /* Item.swift in Sources */,
 				CE421D1A2C5AEFAD002178C2 /* CityListView.swift in Sources */,

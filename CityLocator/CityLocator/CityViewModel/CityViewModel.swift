@@ -15,21 +15,25 @@ class CityViewModel: ObservableObject {
         }
     }
     @Published var filteredCities: [CityModel] = []
-    private var cityService = CityService()
+    @Published var selectedCity: CityModel?
+    @Published var isLandscape: Bool = false
     
-    init() {
+    private var cityService: CityServiceProtocol
+    
+    init(cityService: CityServiceProtocol) {
+        self.cityService = cityService
         loadCities()
     }
     
     func loadCities() {
-        cityService.fetchCities { result in
+        cityService.fetchCities { [weak self] result in
+            guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {
                 case .success(let cities):
                     self.cities = cities
                     self.filterCities()
                 case .failure(let error):
-                    // Manejo de errores
                     print(error)
                 }
             }
@@ -44,5 +48,9 @@ class CityViewModel: ObservableObject {
                 $0.name.lowercased().hasPrefix(filter.lowercased())
             }.sorted { $0.name < $1.name }
         }
+    }
+    
+    func updateOrientation(isLandscape: Bool) {
+        self.isLandscape = isLandscape
     }
 }
