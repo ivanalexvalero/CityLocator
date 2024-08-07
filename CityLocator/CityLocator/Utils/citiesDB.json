@@ -1,0 +1,9 @@
+
+[
+    {"country":"DE","name":"Lichtenrade","_id":2878044,"coord":{"lon":13.40637,"lat":52.398441}},
+    {"country":"RU","name":"Zavety Il’icha","_id":464176,"coord":{"lon":37.849998,"lat":56.049999}},
+    {"country":"IL","name":"‘Azriqam","_id":295582,"coord":{"lon":34.700001,"lat":31.75}},
+    {"country":"IN","name":"Ghūra","_id":1271231,"coord":{"lon":79.883331,"lat":24.766666}},
+    {"country":"UA","name":"Tyuzler","_id":690856,"coord":{"lon":34.083332,"lat":44.466667}},
+    {"country":"RU","name":"Zaponor’ye","_id":464737,"coord":{"lon":38.861942,"lat":55.639999}}
+]

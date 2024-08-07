@@ -16,14 +16,18 @@ struct CityListConstants {
 
 struct CityDetailConstants {
     static let citiesDetails = "Detalles de la Ciudad"
+    static let closeView = "xmark.circle.fill"
 }
 
 struct CityMapConstants {
-    static let moreInfo = "Mas info de "
-    static let moreInfoAbout = "Mas info sobre "
+    static let moreInfoAbout = "Mas info sobre"
 }
 
 struct CityGeneralConstants {
     static let longitude = "Lon: "
     static let latitude = "Lat: "
+}
+
+struct CityLocatorConstants {
+    static let emptyMapText = "Selecciona una ciudad para ver en el mapa"
 }

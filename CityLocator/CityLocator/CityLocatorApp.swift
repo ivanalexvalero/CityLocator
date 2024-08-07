@@ -6,27 +6,20 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct CityLocatorApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    // Crea la instancia del servicio
+    private let cityService: CityServiceProtocol = CityService() // usar CityServiceMock para pruebas
+    
+    // Crea la instancia del ViewModel
+    private var cityViewModel: CityViewModel {
+        CityViewModel(cityService: cityService)
+    }
+    
     var body: some Scene {
         WindowGroup {
-            CityListView()
+            CityLocatorView(viewModel: cityViewModel)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

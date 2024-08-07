@@ -9,17 +9,33 @@ import SwiftUI
 
 struct CityDetailView: View {
     let city: CityModel
-
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
-        VStack (alignment: .leading) {
-            Text("\(city.name), \(city.country)")
-                .font(.largeTitle)
-            Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
-                .font(.subheadline)
+        NavigationView {
+            VStack (alignment: .leading) {
+                Text("\(city.name), \(city.country)")
+                    .font(.title)
+                Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
+                    .font(.subheadline)
+            }
+            .padding()
+            .navigationTitle(CityDetailConstants.citiesDetails)
+            .navigationBarTitleDisplayMode(.inline)
+            .font(.title3)
+            .frame(height: 300)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: CityDetailConstants.closeView) // Cambié el icono para probar
+                            .foregroundColor(.red)
+                            .font(.title3)
+                    }
+                }
+            }
         }
-        .padding()
-        .navigationTitle(CityDetailConstants.citiesDetails)
-        .frame(height: 300)
     }
 }
 

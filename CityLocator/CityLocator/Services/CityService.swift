@@ -8,15 +8,18 @@
 import Foundation
 import Observation
 
+protocol CityServiceProtocol {
+    func fetchCities(completion: @escaping (Result<[CityModel], Error>) -> Void)
+}
+
 @Observable
-class CityService {
+class CityService: CityServiceProtocol {
     func fetchCities(completion: @escaping (Result<[CityModel], Error>) -> Void) {
         let url = URL(string: URLs.citiesEndpoint)!
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 do {
                     let cities = try JSONDecoder().decode([CityModel].self, from: data)
-                    print("Cities: ", cities)
                     completion(.success(cities))
                 } catch {
                     completion(.failure(error))

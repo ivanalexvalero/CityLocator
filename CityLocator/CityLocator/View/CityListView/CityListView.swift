@@ -8,31 +8,41 @@
 import SwiftUI
 
 struct CityListView: View {
-    @StateObject private var viewModel = CityViewModel()
+    @ObservedObject var viewModel: CityViewModel
+    
+    init(viewModel: CityViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
-                List(viewModel.filteredCities) { city in
-                    NavigationLink(destination: CityMapView(city: city)) {
-                        VStack(alignment: .leading) {
-                            Text("\(city.name), \(city.country)")
-                                .font(.headline)
-                            Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
-                                .font(.subheadline)
-                        }
+            List(viewModel.filteredCities) { city in
+                Button(action: {
+                    viewModel.selectedCity = city
+                }) {
+                    VStack(alignment: .leading) {
+                        Text("\(city.name), \(city.country)")
+                            .font(.headline)
+                        Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
+                            .font(.subheadline)
                     }
                 }
             }
-            .navigationTitle(CityListConstants.cities)
+            .listStyle(.plain)
+            .tint(.black)
             .searchable(text: $viewModel.filter, prompt: CityListConstants.promptSearch)
             .onAppear {
                 viewModel.loadCities()
             }
+            .scrollIndicators(.hidden)
+            .navigationTitle(CityListConstants.cities)
+            .toolbarBackground(.white, for: .navigationBar)
         }
     }
 }
 
 #Preview {
-    CityListView()
+    CityListView(viewModel: CityViewModel(cityService: CityServiceMock()))
 }
+
+
