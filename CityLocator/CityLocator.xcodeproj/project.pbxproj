@@ -16,17 +16,35 @@
 		CE421D252C5C3A87002178C2 /* CityViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE421D242C5C3A87002178C2 /* CityViewConstants.swift */; };
 		CE4A55A12C59A80A0092B043 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A55A02C59A80A0092B043 /* CityModel.swift */; };
 		CE4A55A42C59A9690092B043 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A55A32C59A9690092B043 /* CityService.swift */; };
+		CE5B34CF2C66B72000A0EDA4 /* CityServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B34CE2C66B72000A0EDA4 /* CityServiceError.swift */; };
 		CE70BA452C5A94610036812D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA442C5A94610036812D /* Constants.swift */; };
 		CE70BA472C5A96C80036812D /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA462C5A96C80036812D /* URLs.swift */; };
 		CE70BA4A2C5AB42E0036812D /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70BA492C5AB42E0036812D /* CityViewModel.swift */; };
 		CE7AE2912C5D5F4100DBC598 /* citiesDB.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7AE2902C5D5F4100DBC598 /* citiesDB.json */; };
 		CE7AE2932C5D667600DBC598 /* CityServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AE2922C5D667600DBC598 /* CityServiceMock.swift */; };
+		CEDE6B502C6540F500032EB5 /* CityServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE6B4F2C6540F500032EB5 /* CityServiceTest.swift */; };
+		CEDE6B582C65836900032EB5 /* CityLocatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE6B572C65836900032EB5 /* CityLocatorUITests.swift */; };
 		CEF08A122C5862F1009C057A /* CityLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A112C5862F1009C057A /* CityLocatorApp.swift */; };
-		CEF08A142C5862F1009C057A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A132C5862F1009C057A /* ContentView.swift */; };
-		CEF08A162C5862F1009C057A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF08A152C5862F1009C057A /* Item.swift */; };
 		CEF08A182C5862F3009C057A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF08A172C5862F3009C057A /* Assets.xcassets */; };
 		CEF08A1B2C5862F3009C057A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF08A1A2C5862F3009C057A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE8E952F2C6530500079D6C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF08A062C5862F1009C057A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEF08A0D2C5862F1009C057A;
+			remoteInfo = CityLocator;
+		};
+		CEDE6B5B2C65836900032EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEF08A062C5862F1009C057A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEF08A0D2C5862F1009C057A;
+			remoteInfo = CityLocator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE0348282C61A1F6000CF730 /* CityLocatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorView.swift; sourceTree = "<group>"; };
@@ -38,20 +56,37 @@
 		CE421D242C5C3A87002178C2 /* CityViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewConstants.swift; sourceTree = "<group>"; };
 		CE4A55A02C59A80A0092B043 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		CE4A55A32C59A9690092B043 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		CE5B34CE2C66B72000A0EDA4 /* CityServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceError.swift; sourceTree = "<group>"; };
 		CE70BA442C5A94610036812D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE70BA462C5A96C80036812D /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		CE70BA492C5AB42E0036812D /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		CE7AE2902C5D5F4100DBC598 /* citiesDB.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = citiesDB.json; sourceTree = "<group>"; };
 		CE7AE2922C5D667600DBC598 /* CityServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceMock.swift; sourceTree = "<group>"; };
+		CE8E952B2C6530500079D6C0 /* CityLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDE6B4F2C6540F500032EB5 /* CityServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityServiceTest.swift; sourceTree = "<group>"; };
+		CEDE6B552C65836900032EB5 /* CityLocatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityLocatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDE6B572C65836900032EB5 /* CityLocatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorUITests.swift; sourceTree = "<group>"; };
 		CEF08A0E2C5862F1009C057A /* CityLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF08A112C5862F1009C057A /* CityLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocatorApp.swift; sourceTree = "<group>"; };
-		CEF08A132C5862F1009C057A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CEF08A152C5862F1009C057A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CEF08A172C5862F3009C057A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF08A1A2C5862F3009C057A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE8E95282C6530500079D6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDE6B522C65836900032EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF08A0B2C5862F1009C057A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +166,7 @@
 				CE421D242C5C3A87002178C2 /* CityViewConstants.swift */,
 				CE7AE2902C5D5F4100DBC598 /* citiesDB.json */,
 				CE2FFCC32C62CC0200F47127 /* OrientationManager.swift */,
+				CE5B34CE2C66B72000A0EDA4 /* CityServiceError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -143,10 +179,28 @@
 			path = CityViewModel;
 			sourceTree = "<group>";
 		};
+		CE8E952C2C6530500079D6C0 /* CityLocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDE6B4F2C6540F500032EB5 /* CityServiceTest.swift */,
+			);
+			path = CityLocatorTests;
+			sourceTree = "<group>";
+		};
+		CEDE6B562C65836900032EB5 /* CityLocatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDE6B572C65836900032EB5 /* CityLocatorUITests.swift */,
+			);
+			path = CityLocatorUITests;
+			sourceTree = "<group>";
+		};
 		CEF08A052C5862F1009C057A = {
 			isa = PBXGroup;
 			children = (
 				CEF08A102C5862F1009C057A /* CityLocator */,
+				CE8E952C2C6530500079D6C0 /* CityLocatorTests */,
+				CEDE6B562C65836900032EB5 /* CityLocatorUITests */,
 				CEF08A0F2C5862F1009C057A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				CEF08A0E2C5862F1009C057A /* CityLocator.app */,
+				CE8E952B2C6530500079D6C0 /* CityLocatorTests.xctest */,
+				CEDE6B552C65836900032EB5 /* CityLocatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,8 +224,6 @@
 				CE70BA432C5A93ED0036812D /* Utils */,
 				CE4A55A22C59A9120092B043 /* Services */,
 				CE4A559F2C59A7730092B043 /* Model */,
-				CEF08A132C5862F1009C057A /* ContentView.swift */,
-				CEF08A152C5862F1009C057A /* Item.swift */,
 				CEF08A172C5862F3009C057A /* Assets.xcassets */,
 				CEF08A192C5862F3009C057A /* Preview Content */,
 			);
@@ -187,6 +241,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE8E952A2C6530500079D6C0 /* CityLocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE8E95332C6530500079D6C0 /* Build configuration list for PBXNativeTarget "CityLocatorTests" */;
+			buildPhases = (
+				CE8E95272C6530500079D6C0 /* Sources */,
+				CE8E95282C6530500079D6C0 /* Frameworks */,
+				CE8E95292C6530500079D6C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE8E95302C6530500079D6C0 /* PBXTargetDependency */,
+			);
+			name = CityLocatorTests;
+			productName = CityLocatorTests;
+			productReference = CE8E952B2C6530500079D6C0 /* CityLocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDE6B542C65836900032EB5 /* CityLocatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDE6B5D2C65836900032EB5 /* Build configuration list for PBXNativeTarget "CityLocatorUITests" */;
+			buildPhases = (
+				CEDE6B512C65836900032EB5 /* Sources */,
+				CEDE6B522C65836900032EB5 /* Frameworks */,
+				CEDE6B532C65836900032EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDE6B5C2C65836900032EB5 /* PBXTargetDependency */,
+			);
+			name = CityLocatorUITests;
+			productName = CityLocatorUITests;
+			productReference = CEDE6B552C65836900032EB5 /* CityLocatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CEF08A0D2C5862F1009C057A /* CityLocator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF08A1E2C5862F3009C057A /* Build configuration list for PBXNativeTarget "CityLocator" */;
@@ -214,6 +304,14 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					CE8E952A2C6530500079D6C0 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CEF08A0D2C5862F1009C057A;
+					};
+					CEDE6B542C65836900032EB5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = CEF08A0D2C5862F1009C057A;
+					};
 					CEF08A0D2C5862F1009C057A = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -233,11 +331,27 @@
 			projectRoot = "";
 			targets = (
 				CEF08A0D2C5862F1009C057A /* CityLocator */,
+				CE8E952A2C6530500079D6C0 /* CityLocatorTests */,
+				CEDE6B542C65836900032EB5 /* CityLocatorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE8E95292C6530500079D6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDE6B532C65836900032EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF08A0C2C5862F1009C057A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +365,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE8E95272C6530500079D6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDE6B502C6540F500032EB5 /* CityServiceTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDE6B512C65836900032EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDE6B582C65836900032EB5 /* CityLocatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF08A0A2C5862F1009C057A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,16 +388,15 @@
 				CE4A55A42C59A9690092B043 /* CityService.swift in Sources */,
 				CE4A55A12C59A80A0092B043 /* CityModel.swift in Sources */,
 				CE421D222C5AF95C002178C2 /* CityMapView.swift in Sources */,
-				CEF08A142C5862F1009C057A /* ContentView.swift in Sources */,
 				CE7AE2932C5D667600DBC598 /* CityServiceMock.swift in Sources */,
 				CE421D1F2C5AF3E0002178C2 /* PreviewData.swift in Sources */,
 				CE421D252C5C3A87002178C2 /* CityViewConstants.swift in Sources */,
 				CE0348292C61A1F6000CF730 /* CityLocatorView.swift in Sources */,
+				CE5B34CF2C66B72000A0EDA4 /* CityServiceError.swift in Sources */,
 				CE70BA4A2C5AB42E0036812D /* CityViewModel.swift in Sources */,
 				CE421D1D2C5AF137002178C2 /* CityDetailView.swift in Sources */,
 				CE2FFCC42C62CC0200F47127 /* OrientationManager.swift in Sources */,
 				CE70BA472C5A96C80036812D /* URLs.swift in Sources */,
-				CEF08A162C5862F1009C057A /* Item.swift in Sources */,
 				CE421D1A2C5AEFAD002178C2 /* CityListView.swift in Sources */,
 				CEF08A122C5862F1009C057A /* CityLocatorApp.swift in Sources */,
 				CE70BA452C5A94610036812D /* Constants.swift in Sources */,
@@ -276,7 +405,88 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CE8E95302C6530500079D6C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEF08A0D2C5862F1009C057A /* CityLocator */;
+			targetProxy = CE8E952F2C6530500079D6C0 /* PBXContainerItemProxy */;
+		};
+		CEDE6B5C2C65836900032EB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEF08A0D2C5862F1009C057A /* CityLocator */;
+			targetProxy = CEDE6B5B2C65836900032EB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		CE8E95312C6530500079D6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanAlexValero.CityLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CityLocator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CityLocator";
+			};
+			name = Debug;
+		};
+		CE8E95322C6530500079D6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanAlexValero.CityLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CityLocator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CityLocator";
+			};
+			name = Release;
+		};
+		CEDE6B5E2C65836900032EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanAlexValero.CityLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CityLocator;
+			};
+			name = Debug;
+		};
+		CEDE6B5F2C65836900032EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanAlexValero.CityLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CityLocator;
+			};
+			name = Release;
+		};
 		CEF08A1C2C5862F3009C057A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,6 +665,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE8E95332C6530500079D6C0 /* Build configuration list for PBXNativeTarget "CityLocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE8E95312C6530500079D6C0 /* Debug */,
+				CE8E95322C6530500079D6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDE6B5D2C65836900032EB5 /* Build configuration list for PBXNativeTarget "CityLocatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDE6B5E2C65836900032EB5 /* Debug */,
+				CEDE6B5F2C65836900032EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEF08A092C5862F1009C057A /* Build configuration list for PBXProject "CityLocator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

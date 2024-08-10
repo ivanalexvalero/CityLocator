@@ -12,6 +12,7 @@ struct CityListConstants {
     static let promptSearch = "Buscar ciudades..."
     static let longitude = "Lon: "
     static let latitude = "Lat: "
+    static let loadingProgress = "Loading cities..."
 }
 
 struct CityDetailConstants {
@@ -30,4 +31,10 @@ struct CityGeneralConstants {
 
 struct CityLocatorConstants {
     static let emptyMapText = "Selecciona una ciudad para ver en el mapa"
+}
+
+struct CityLocatorError {
+    static let errorTitle = "Error"
+    static let errorAlertMessage = "Ocurrio un error inesperado, intente nuevamente"
+    static let errorAlertButton = "Retry"
 }

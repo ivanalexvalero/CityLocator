@@ -9,37 +9,51 @@ import Foundation
 
 class CityViewModel: ObservableObject {
     @Published var cities: [CityModel] = []
+    @Published var filteredCities: [CityModel] = []
+    @Published var selectedCity: CityModel?
+    @Published var isLandscape: Bool = false
     @Published var filter: String = "" {
         didSet {
             filterCities()
         }
     }
-    @Published var filteredCities: [CityModel] = []
-    @Published var selectedCity: CityModel?
-    @Published var isLandscape: Bool = false
+    @Published var isLoading: Bool = false
+    @Published var errorMessage: String?
     
     private var cityService: CityServiceProtocol
-    
+    private var allCities: [CityModel] = []
+
     init(cityService: CityServiceProtocol) {
         self.cityService = cityService
-        loadCities()
+        Task {
+            await loadCities()
+        }
     }
-    
-    func loadCities() {
-        cityService.fetchCities { [weak self] result in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let cities):
-                    self.cities = cities
-                    self.filterCities()
-                case .failure(let error):
-                    print(error)
-                }
+
+    func loadCities() async {
+        self.isLoading = true
+        do {
+            let allCities = try await cityService.fetchCities()
+            // Actualiza la UI en el hilo principal
+            await MainActor.run {
+                self.allCities = allCities
+                self.cities = allCities
+                self.filterCities()
+                self.isLoading = false
+            }
+        } catch let error as CityServiceError {
+            await MainActor.run {
+                self.isLoading = false
+                self.errorMessage = error.localizedDescription
+            }
+        } catch {
+            await MainActor.run {
+                self.isLoading = false
+                self.errorMessage = "A ocurrido un error"
             }
         }
     }
-    
+
     private func filterCities() {
         if filter.isEmpty {
             filteredCities = cities.sorted { $0.name < $1.name }
@@ -49,7 +63,7 @@ class CityViewModel: ObservableObject {
             }.sorted { $0.name < $1.name }
         }
     }
-    
+
     func updateOrientation(isLandscape: Bool) {
         self.isLandscape = isLandscape
     }

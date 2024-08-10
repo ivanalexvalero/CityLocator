@@ -38,6 +38,7 @@ struct CityLocatorView: View {
                 } else {
                     // Modo retrato
                     CityListView(viewModel: viewModel)
+                    // se uso Sheet presentation para mejorar la accesibilidad
                         .sheet(item: $viewModel.selectedCity) { city in
                             CityMapView(city: city)
                         }

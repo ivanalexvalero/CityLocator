@@ -24,6 +24,7 @@ struct CityMapView: View {
 
     var body: some View {
         GeometryReader { geometry in
+            // calculo con geometry para dividir la pantalla 
             ZStack {
                     Map(coordinateRegion: $region)
                         .navigationTitle("\(city.name), \(city.country)")
