@@ -26,10 +26,11 @@ struct CityDetailView: View {
             .frame(height: 300)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
+                    // se crea boton para hacer dismiss de la view
                     Button(action: {
                         dismiss()
                     }) {
-                        Image(systemName: CityDetailConstants.closeView) // Cambié el icono para probar
+                        Image(systemName: CityDetailConstants.closeView)
                             .foregroundColor(.red)
                             .font(.title3)
                     }

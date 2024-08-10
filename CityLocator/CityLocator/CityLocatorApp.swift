@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct CityLocatorApp: App {
-    // Crea la instancia del servicio
-    private let cityService: CityServiceProtocol = CityService() // usar CityServiceMock para pruebas
-    
-    // Crea la instancia del ViewModel
-    private var cityViewModel: CityViewModel {
-        CityViewModel(cityService: cityService)
+    @StateObject private var cityViewModel: CityViewModel
+
+    init() {
+        // modo debug para hacer uso del mock
+        // modo release para consumir el servicio
+        #if DEBUG
+        let cityService: CityServiceProtocol = CityServiceMock()
+        #else
+        let cityService: CityServiceProtocol = CityService()
+        #endif
+        
+        _cityViewModel = StateObject(wrappedValue: CityViewModel(cityService: cityService))
     }
     
     var body: some Scene {

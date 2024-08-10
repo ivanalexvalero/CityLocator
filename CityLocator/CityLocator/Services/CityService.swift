@@ -9,24 +9,33 @@ import Foundation
 import Observation
 
 protocol CityServiceProtocol {
-    func fetchCities(completion: @escaping (Result<[CityModel], Error>) -> Void)
+    func fetchCities() async throws -> [CityModel]
 }
 
 @Observable
 class CityService: CityServiceProtocol {
-    func fetchCities(completion: @escaping (Result<[CityModel], Error>) -> Void) {
-        let url = URL(string: URLs.citiesEndpoint)!
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                do {
-                    let cities = try JSONDecoder().decode([CityModel].self, from: data)
-                    completion(.success(cities))
-                } catch {
-                    completion(.failure(error))
-                }
-            } else if let error = error {
-                completion(.failure(error))
-            }
-        }.resume()
+    private var cache: [CityModel]?
+
+    func fetchCities() async throws -> [CityModel] {
+        if let cachedCities = cache {
+            return cachedCities
+        }
+
+        guard let url = URL(string: URLs.citiesEndpoint) else {
+            throw CityServiceError.invalidURL
+        }
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let cities = try JSONDecoder().decode([CityModel].self, from: data)
+            cache = cities
+            return cities
+        } catch let error as URLError {
+            throw CityServiceError.networkError(error)
+        } catch let error as DecodingError {
+            throw CityServiceError.decodingError(error)
+        } catch {
+            throw CityServiceError.unknownError
+        }
     }
 }
