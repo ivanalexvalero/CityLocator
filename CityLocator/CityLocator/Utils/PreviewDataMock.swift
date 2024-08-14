@@ -1,5 +1,5 @@
 //
-//  PreviewData.swift
+//  PreviewDataMock.swift
 //  CityLocator
 //
 //  Created by Ivan Alexander Valero on 31/07/2024.

@@ -24,15 +24,15 @@ struct CityListView: View {
                         .padding()
                 } else {
                     LazyVStack(alignment: .leading, spacing: 10) {
-                        // Se hizo uso de LazyVStack en lugar de List: es más eficiente en términos de uso de memoria y tiempos de renderización
+                        // Made use of LazyVStack: more efficient in terms of memory usage and rendering times
                         ForEach(viewModel.filteredCities) { city in
                             Button(action: {
                                 viewModel.selectedCity = city
                             }) {
                                 VStack(alignment: .leading) {
-                                    Text("\(city.name), \(city.country)")
+                                    CityText(text: "\(city.name), \(city.country)")
                                         .font(.headline)
-                                    Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
+                                    CityText(text: "\(CityGeneralConstants.longitude.replacingOccurrences(of: Constants.placeholder, with: "\(city.coord.lon)")), \(CityGeneralConstants.latitude.replacingOccurrences(of: Constants.placeholder, with: "\(city.coord.lat)"))")
                                         .font(.subheadline)
                                 }
                             }

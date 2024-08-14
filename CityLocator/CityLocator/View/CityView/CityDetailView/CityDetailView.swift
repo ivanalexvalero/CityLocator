@@ -14,9 +14,9 @@ struct CityDetailView: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .leading) {
-                Text("\(city.name), \(city.country)")
+                CityText(text: "\(city.name), \(city.country)")
                     .font(.title)
-                Text("\(CityGeneralConstants.longitude) \(city.coord.lon), \(CityGeneralConstants.latitude) \(city.coord.lat)")
+                CityText(text: "\(CityGeneralConstants.longitude.replacingOccurrences(of: Constants.placeholder, with: "\(city.coord.lon)")), \(CityGeneralConstants.latitude.replacingOccurrences(of: Constants.placeholder, with: " \(city.coord.lat)"))")
                     .font(.subheadline)
             }
             .padding()
@@ -26,7 +26,6 @@ struct CityDetailView: View {
             .frame(height: 300)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    // se crea boton para hacer dismiss de la view
                     Button(action: {
                         dismiss()
                     }) {
