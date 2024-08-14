@@ -29,7 +29,7 @@ final class CityServiceTests: XCTestCase {
         let cities = try await cityService.fetchCities()
         
         // Asegurarse de que los datos se recibieron correctamente
-        XCTAssertFalse(cities.isEmpty, "La lista no deberia ser vacia")
+        XCTAssertFalse(cities.isEmpty, "The list should not be empty")
         XCTAssertTrue(cities.count > 0)
     }
 
@@ -41,8 +41,8 @@ final class CityServiceTests: XCTestCase {
         let cities = try await cityServiceMock.fetchCities()
 
         // Asegurarse de que los datos del mock se recibieron correctamente
-        XCTAssertFalse(cities.isEmpty, "La lista no deberia ser vacia")
-        XCTAssertEqual(cities.first?.name, "Lichtenrade", "El nombre de la primera ciudad deberia ser igual a esta.")
+        XCTAssertFalse(cities.isEmpty, "The list should not be empty")
+        XCTAssertEqual(cities.first?.name, "Lichtenrade", "The name of the first city should be the same as this one.")
     }
     
     func testFetchCitiesMockFailure() async throws {
@@ -52,7 +52,7 @@ final class CityServiceTests: XCTestCase {
             _ = try await cityServiceMock.fetchCities()
             XCTFail("Se esperaba un fracaso pero se consiguió el éxito")
         } catch {
-            XCTAssertTrue(error is CityServiceMock.MockError, "Erros simulado")
+            XCTAssertTrue(error is CityServiceMock.MockError, "Simulated error")
         }
     }
     
@@ -65,8 +65,8 @@ final class CityServiceTests: XCTestCase {
         await viewModel.loadCities()
         
         XCTAssertNotNil(viewModel.errorMessage)
-        XCTAssertEqual(viewModel.errorMessage, "A ocurrido un error")
-  
+        XCTAssertEqual(viewModel.errorMessage, "An error occurred")
+
         let view = await CityListView(viewModel: viewModel)
         XCTAssert(viewModel.isLoading == false)
         
