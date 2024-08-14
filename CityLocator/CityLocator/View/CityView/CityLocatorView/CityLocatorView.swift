@@ -20,7 +20,7 @@ struct CityLocatorView: View {
         orientationManager.handleOrientation { isLandscape in
             Group {
                 if isLandscape {
-                    // Modo paisaje: Pantalla dividida en dos
+                    // Landscape
                     HStack {
                         VStack {
                             CityListView(viewModel: viewModel)
@@ -31,21 +31,19 @@ struct CityLocatorView: View {
                             CityMapView(city: selectedCity)
                                 .frame(width: UIScreen.main.bounds.width * 0.5)
                         } else {
-                            Text(CityLocatorConstants.emptyMapText)
+                            CityText(text: CityLocatorConstants.emptyMapText)
                                 .frame(width: UIScreen.main.bounds.width * 0.5)
                         }
                     }
                 } else {
-                    // Modo retrato
+                    // Portrait
                     CityListView(viewModel: viewModel)
-                    // se uso Sheet presentation para mejorar la accesibilidad
                         .sheet(item: $viewModel.selectedCity) { city in
                             CityMapView(city: city)
                         }
                 }
             }
             .navigationViewStyle(StackNavigationViewStyle())
-                 // Esto es para evitar que la vista se divida en el iPad
         }
     }
 }

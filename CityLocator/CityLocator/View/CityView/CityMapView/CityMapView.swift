@@ -45,7 +45,7 @@ struct CityMapView: View {
                     Button {
                         showInfoSheet.toggle()
                     } label: {
-                        Text("\(CityMapConstants.moreInfoAbout) \(city.name)")
+                        CityText(text: "\(CityMapConstants.moreInfoAbout) \(city.name)")
                     }
                     .buttonStyle(.borderedProminent)
                     .padding()

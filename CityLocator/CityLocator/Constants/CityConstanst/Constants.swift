@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Constants {
+struct ConstantService {
     static let baseURL = "https://gist.githubusercontent.com"
 }

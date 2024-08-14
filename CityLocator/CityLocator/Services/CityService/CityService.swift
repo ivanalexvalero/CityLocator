@@ -22,7 +22,7 @@ class CityService: CityServiceProtocol {
         }
 
         guard let url = URL(string: URLs.citiesEndpoint) else {
-            throw CityServiceError.invalidURL
+            throw CityGenericError.invalidURL
         }
 
         do {
@@ -31,11 +31,11 @@ class CityService: CityServiceProtocol {
             cache = cities
             return cities
         } catch let error as URLError {
-            throw CityServiceError.networkError(error)
+            throw CityGenericError.networkError(error)
         } catch let error as DecodingError {
-            throw CityServiceError.decodingError(error)
+            throw CityGenericError.decodingError(error)
         } catch {
-            throw CityServiceError.unknownError
+            throw CityGenericError.unknownError
         }
     }
 }

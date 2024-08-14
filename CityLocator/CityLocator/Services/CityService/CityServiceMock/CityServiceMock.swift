@@ -7,7 +7,7 @@
 
 import Foundation
 
-//  Se creo este serviceMock para utilizar la respuesta de un json local para poder probar los componentes de una manera mas rapida con pocos elementos y, ademas, poder hacer pruebas de unit test.
+//  A simulation was created to test
 class CityServiceMock: CityServiceProtocol {
     enum MockError: Error {
         case fileNotFound
@@ -21,8 +21,8 @@ class CityServiceMock: CityServiceProtocol {
             throw MockError.fileNotFound
         }
         
-        guard let url = Bundle.main.url(forResource: "citiesDB", withExtension: "json") else {
-            throw NSError(domain: "MockCityServiceError", code: 1, userInfo: [NSLocalizedDescriptionKey: "File not found"])
+        guard let url = Bundle.main.url(forResource: CityServiceMockConstants.resouce, withExtension: CityServiceMockConstants.json) else {
+            throw NSError(domain: CityServiceMockConstants.domainNSError, code: 1, userInfo: [NSLocalizedDescriptionKey: CityServiceMockConstants.userInfoNSLocalized])
         }
         
         let data = try Data(contentsOf: url)

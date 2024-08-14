@@ -41,7 +41,7 @@ class CityViewModel: ObservableObject {
                 self.filterCities()
                 self.isLoading = false
             }
-        } catch let error as CityServiceError {
+        } catch let error as CityGenericError {
             await MainActor.run {
                 self.isLoading = false
                 self.errorMessage = error.localizedDescription
@@ -49,7 +49,7 @@ class CityViewModel: ObservableObject {
         } catch {
             await MainActor.run {
                 self.isLoading = false
-                self.errorMessage = "A ocurrido un error"
+                self.errorMessage = CityGenericError.errorDefaultMessage.errorMessage
             }
         }
     }
